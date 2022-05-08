@@ -14,7 +14,7 @@ app.use(express.static("public"));
 
 let day = "";
 
-mongoose.connect("mongodb+srv://mythri_kaulwar:Mythri123@cluster0.puuhi.mongodb.net/todoListDB", {useNewUrlParser: true});
+mongoose.connect(process.env.CONNECTION_URL, {useNewUrlParser: true});
 console.log("Connected to server");
 
 const itemsSchema = new mongoose.Schema({
